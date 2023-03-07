@@ -1,29 +1,9 @@
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
-import { goToAboutPage, goToContactPage, goToIndexPage, goToProjectsPage, goToStackPage } from '../../Router/coordinator';
+import { goToIndexPage } from '../../Router/coordinator';
 import { useNavigate } from "react-router-dom";
 import {
-
-
     Flex,
-    FormControl,
-    FormLabel,
-
-    IconButton,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    Link,
-    Stack,
-    Textarea,
-    Tooltip,
-    useClipboard,
-    useColorModeValue,
-    VStack,
-
-    Center,
-
-    Image,
-    Divider
+    useColorModeValue
 } from '@chakra-ui/react';
 
 export default function NotFoundPage() {

@@ -1,29 +1,19 @@
-import { ReactNode } from 'react';
 import {
     Box,
     Flex,
-    Avatar,
     Link,
     Button,
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuDivider,
-    useDisclosure,
     useColorModeValue,
     Stack,
     useColorMode,
-    Center,
- 
+    Image,
+    Text
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { Image, Text } from "@chakra-ui/react"
 import logoLinkedin from "../../Assets/icons/linkedin.svg"
 import logoGitHub from "../../Assets/icons/github.svg"
-import myLogo from "../../Assets/myLogo.png"
 import { useNavigate } from "react-router-dom";
-import { goToAboutPage, goToContactPage, goToIndexPage,goToProjectsPage,goToStackPage } from '../../Router/coordinator';
+import { goToAboutPage, goToContactPage, goToIndexPage, goToProjectsPage, goToStackPage } from '../../Router/coordinator';
 
 
 export default function Header() {
@@ -32,21 +22,21 @@ export default function Header() {
 
     return (
         <>
-            <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} >
-                <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <Box bg={useColorModeValue('gray.100', 'gray.900')}wrap={"wrap"} padding={"10px"}>
+                <Flex display={"flex"} alignItems={'center'} justifyContent={'space-between'} wrap={"wrap"} >
                     <Text fontSize='30px' color='tomato' as='b'>Patrícia Possari</Text>
 
-                    <Flex alignItems={'center'}>
-                        <Stack direction={'row'} spacing={7}>
+                    <Flex alignItems={'center'}  wrap={"wrap"} >
+                        <Stack direction={'row'} spacing={7}  wrap={"wrap"} >
                             <Flex class="nav-group-page-items" gap={"50px"} justifyContent={"center"} alignItems={"center"}>
-                                <Link onClick={()=>goToIndexPage(navigate)}>Home</Link>
-                                <Link onClick={()=>goToAboutPage(navigate)}>About</Link>
-                                <Link onClick={()=>goToStackPage(navigate)}>Tech Stack</Link>
-                                <Link onClick={()=>goToProjectsPage(navigate)}>Projects</Link>
-                                <Link onClick={()=>goToContactPage(navigate)}>Contact</Link>
+                                <Link onClick={() => goToIndexPage(navigate)}>Home</Link>
+                                <Link onClick={() => goToAboutPage(navigate)}>About</Link>
+                                <Link onClick={() => goToStackPage(navigate)}>Tech Stack</Link>
+                                <Link onClick={() => goToProjectsPage(navigate)}>Projects</Link>
+                                <Link onClick={() => goToContactPage(navigate)}>Contact</Link>
                             </Flex>
 
-                            <Flex gap={"50px"} justifyContent={"space-between"} alignItems={"center"} >
+                            <Flex gap={"10px"} justifyContent={"space-between"} alignItems={"center"}  >
                                 <a href="https://github.com/patriciapossarii" target="_blank">
                                     <Image src={logoGitHub} alt="Github icon" />
                                 </a>
